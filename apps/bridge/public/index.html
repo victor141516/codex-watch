@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#101210" />
+    <title>Codex Watch</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">REMOTE CONSOLE</p>
+          <h1>Codex Watch</h1>
+        </div>
+        <button id="refresh" class="icon-button" aria-label="Actualizar conversaciones" title="Actualizar">↻</button>
+      </header>
+
+      <section id="token-panel" class="token-panel hidden">
+        <label for="token">Token del servidor</label>
+        <div class="token-row">
+          <input id="token" type="password" autocomplete="current-password" placeholder="Pega CODEX_WATCH_TOKEN" />
+          <button id="save-token">Entrar</button>
+        </div>
+      </section>
+
+      <section id="list-view" class="view">
+        <div class="search-row">
+          <input id="search" type="search" placeholder="Buscar tareas…" aria-label="Buscar tareas" />
+          <span id="count" class="count">—</span>
+        </div>
+        <div id="thread-list" class="thread-list" aria-live="polite"></div>
+      </section>
+
+      <section id="thread-view" class="view hidden">
+        <div class="thread-head">
+          <button id="back" class="back-button">← Tareas</button>
+          <span id="status" class="status"></span>
+        </div>
+        <h2 id="thread-title"></h2>
+        <div id="messages" class="messages" aria-live="polite"></div>
+        <form id="composer" class="composer">
+          <textarea id="message" rows="2" maxlength="12000" placeholder="Escribe a Codex…"></textarea>
+          <button id="send" type="submit">Enviar</button>
+        </form>
+      </section>
+
+      <p id="error" class="error hidden" role="alert"></p>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>

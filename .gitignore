@@ -1,0 +1,46 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+local.properties
+*.keystore
+*.jks
+*.pem
+*.key
+
+# Runtime data
+*.log
+*.wav
+*.pcm
+*.token
+bridge.stdout.log
+bridge.stderr.log
+
+# Node
+node_modules/
+coverage/
+
+# Android / Gradle
+.gradle/
+**/build/
+**/.cxx/
+*.apk
+*.aab
+
+# ESP-IDF
+firmware/esp32/managed_components/
+firmware/esp32/sdkconfig
+firmware/esp32/sdkconfig.old
+firmware/esp32/dependencies.lock
+firmware/esp32/build/
+artifacts/
+*.bin
+*.elf
+*.map
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
